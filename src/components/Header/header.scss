@@ -1,0 +1,44 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 40px;
+	background: rgb(94, 122, 248);
+
+	&__logo {
+		height: 100px;
+		width: 100px;
+		img {
+			height: 100%;
+			width: 100%;
+			border-radius: 10px;
+			object-fit: cover;
+		}
+	}
+	&__account-action {
+		p,
+		button {
+			font-size: 20px;
+			color: #fff;
+		}
+		button {
+			width: 150px;
+			height: 70px;
+			background: transparent;
+			border: 1px solid rgb(180, 180, 180);
+			outline: none;
+			cursor: pointer;
+
+			@media screen and (max-width: 520px) {
+				width: 100px;
+				height: 50px;
+			}
+		}
+	}
+	@media screen and (max-width: 400px) {
+		justify-content: center;
+		&__logo {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,93 @@
+.login_modal {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 50%;
+	margin-top: -10%;
+	&__error {
+		color: rgb(240, 96, 96);
+		margin-bottom: 40px;
+	}
+	&__title {
+		font-size: 30px;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	&__description {
+		font-size: 20px;
+		margin-bottom: 40px;
+	}
+	&__form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		&__input {
+			height: 50px;
+			outline: none;
+			border: 1px solid rgb(117, 117, 117);
+			font-size: 20px;
+			padding: 0 10px;
+			border-radius: 15px;
+			margin-bottom: 20px;
+		}
+		&__button {
+			background: rgb(255, 218, 10);
+			outline: none;
+			border: rgb(117, 117, 117);
+			max-width: 80%;
+			font-size: 22px;
+			height: 60px;
+			cursor: pointer;
+			border-radius: 20px;
+			&:hover {
+				box-shadow: 0px 1px 15px 0px rgba(34, 60, 80, 0.2);
+			}
+		}
+		input,
+		button {
+			width: 100%;
+			box-sizing: border-box;
+		}
+	}
+	.preloader {
+		display: inline-block;
+		position: relative;
+		width: 80px;
+		height: 80px;
+		div {
+			box-sizing: border-box;
+			display: block;
+			position: absolute;
+			width: 64px;
+			height: 64px;
+			margin: 8px;
+			border: 8px solid rgb(94, 122, 248);
+			border-radius: 50%;
+			animation: preloader 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+			border-color: rgb(94, 122, 248) transparent transparent transparent;
+			&:nth-child(1) {
+				animation-delay: -0.45s;
+			}
+			&:nth-child(2) {
+				animation-delay: -0.3s;
+			}
+			&:nth-child(3) {
+				animation-delay: -0.15s;
+			}
+		}
+	}
+
+	@media screen and (max-width: 620px) {
+		margin-top: -25%;
+		padding: 0 20px;
+	}
+}
+@keyframes preloader {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
